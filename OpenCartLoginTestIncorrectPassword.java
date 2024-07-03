@@ -18,7 +18,7 @@ public class OpenCartLoginTestIncorrectPassword {
         // Navigate to the login page
         driver.get("https://demo.opencart.com/index.php?route=account/login");
 
-        // Fill in the login form with incorrect password
+        // Enter incorrect password
         WebElement inputEmail = driver.findElement(By.id("input-email"));
         inputEmail.sendKeys("your_email@example.com");
 
