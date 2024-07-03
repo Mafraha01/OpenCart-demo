@@ -15,14 +15,14 @@ public class ForgotPasswordTest {
         ChromeOptions options = new ChromeOptions();
         WebDriver driver = new ChromeDriver(options);
 
-        // Step 1: Navigate to the login page
+        //Navigate to the login page
         driver.get("https://demo.opencart.com/index.php?route=account/login");
 
-        // Step 2: Click on the "Forgot Password" link
+        //Click on the "Forgot Password" link
         WebElement forgotPasswordLink = driver.findElement(By.linkText("Forgotten Password"));
         forgotPasswordLink.click();
 
-        // Expected Result: The system should redirect to the password recovery page
+        // Expected Result: The system should redirect to the recovery page
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("route=account/forgotten"));
 
