@@ -15,10 +15,10 @@ public class LoginButtonDisabledTest {
         ChromeOptions options = new ChromeOptions();
         WebDriver driver = new ChromeDriver(options);
 
-        // Step 1: Navigate to the login page
+        // Navigate to the login page
         driver.get("https://demo.opencart.com/index.php?route=account/login");
 
-        // Step 2: Verify the state of the login button (it should be disabled)
+        // Verify the state of the login button (it should be disabled)
         WebElement loginButton = driver.findElement(By.cssSelector("button[type='submit'].btn.btn-primary"));
         if (!loginButton.isEnabled()) {
             System.out.println("Login button is initially disabled.");
@@ -26,11 +26,11 @@ public class LoginButtonDisabledTest {
             System.out.println("Login button is initially enabled.");
         }
 
-        // Step 3: Enter a valid email
+        // Enter a valid email
         WebElement emailField = driver.findElement(By.id("input-email"));
         emailField.sendKeys("your_email@example.com");
 
-        // Step 4: Enter a valid password
+        // Enter a valid password
         WebElement passwordField = driver.findElement(By.id("input-password"));
         passwordField.sendKeys("your_password");
 
